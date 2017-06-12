@@ -3,16 +3,21 @@
 using namespace std;
 int main()
 {
-	double n,sum=1,a,m=1; 
+
+	double  sum = 1, a, m = 1;
+	int n;
 	cout << "enter term n" << endl;
 	cin >> n;
-	a = (n +1)/2;
-	int i = 1; 
-	while (i<a)
-	{
-		i++;
-		m =m+2;
-		sum = sum + ((pow(-1, i+1))*m);
+	a = (n + 1) / 2;
+	int i = 1;
+	if (n % 2 && n>0) {
+		while (i < a)
+		{
+			i++;
+			m = m + 2;
+			sum = sum + ((pow(-1, i + 1))*m);
+		}
+		cout << "sum is " << sum << endl;
 	}
-	cout << "sum is " << sum<<endl;
+	else { cout << "Error" << endl; }
 }
