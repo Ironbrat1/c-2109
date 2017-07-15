@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+void numspace(int m)
+{
+	int i;
+	for (i = 1;i <= m;i++)
+		cout << " ";
+}
+int main()
+{
+	int p, n,l,w;
+	cin >> p;
+	w = p - 2;
+	numspace(p - 1);
+	cout << "*"<<endl;
+
+	for (n = 1;n <= p;n+=2)
+	{
+		numspace(w);
+		cout << "*";
+		numspace(n);
+		cout << "*" << endl;
+		w = w - 1;
+	}
+	
+	for (l = 1;l <= p;l++)
+	{
+		cout << "* ";
+	}
+	cout << endl;
+}
