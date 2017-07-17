@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+float maxval(float a)
+{
+	float i, d,max=0;
+	
+	for (i = 1;i <= a;i++)
+	{cin >> d;
+		if (d > max)
+		{
+			max = d;
+		}
+	}
+	return max;
+}
+int main()
+{
+	float c;
+	cout << "Enter number of terms" << endl;
+	cin >> c;
+	cout << "Enter numbers one by one" << endl;
+	cout << maxval(c) << endl;
+	
+	
+
+	
+}
