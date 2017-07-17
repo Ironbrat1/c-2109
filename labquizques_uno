@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+void Ag3profile(int a)
+{
+	if (a < 18) {
+		cout << "Child" << endl;
+	}
+	if (a >= 18 && a<65) {
+		cout << "Adult" << endl;
+	}
+	if (a >= 65) {
+		cout << "Senior citizen" << endl;
+	}
+	if (a < 25) {
+		cout << "Student" << endl;
+	}
+	if (a >= 25) {
+		cout << "Worker" << endl;
+	}
+}
+int main()
+{
+	int c; 
+	cin >> c;
+	Ag3profile(c);
+}
