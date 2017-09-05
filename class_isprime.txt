@@ -1,0 +1,45 @@
+#include<iostream>
+
+using namespace std;
+class primenumber {
+private:int a;
+public:int prd = 1;
+	void assign(int n)
+{
+	a = n;
+}
+	bool isPrime(int a)
+	{
+		if (a == 1) {
+			return false;
+		}
+		for (int i = 2;i < a;i++)
+		{
+			if(a%i==0){
+				return false;
+
+			}
+			
+		}return true;
+	}
+		void print()
+		{
+			if (isPrime(a))
+			{
+				cout << "The number is prime " << endl;
+			}
+			else {
+				cout << "The number is not prime " << endl;
+			}
+		}
+};
+int main()
+{
+	primenumber x;
+	cout << "Enter the number" << endl;
+	int y;
+	cin >> y;
+	x.assign(y);
+	x.print();
+
+}

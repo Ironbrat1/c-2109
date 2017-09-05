@@ -1,0 +1,62 @@
+#include<iostream>
+
+using namespace std;
+class employee {
+private:char name[40];
+		char code[20];
+		char designation[20];
+public:
+	void getdata()
+{
+	cout << "Enter name" << endl;
+	cin.getline(name, 40);
+	cout << "Enter code" << endl;
+	cin.getline(code, 20);
+	cout << "Enter designation" << endl;
+	cin.getline(designation, 20);
+
+}
+	
+	
+		void print()
+		{
+			
+				cout << "Name: " <<name<< endl;
+				cout << "code: " << code << endl;
+				cout << "designation: " << designation << endl;
+			
+		}
+};
+class subdata:public employee {
+private:int experience;
+		int age;
+public:
+	void getdata1()
+	{
+		getdata();
+		cout << "Enter years of experience: " << endl;
+		cin>>experience;
+		cout << "Enter age:" << endl;
+		cin>>age;
+		
+
+	}
+
+
+	void print1()
+	{
+
+		print();
+		cout << "years of experience: " << experience << endl;
+		cout << "age: " << age << endl;
+
+	}
+};
+int main()
+{
+	subdata x;
+	
+	x.getdata1();
+	x.print1();
+
+}

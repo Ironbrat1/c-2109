@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+class factorial {
+private:int a;
+public:int prd = 1;
+	void assign(int n)
+{
+	a = n;
+}
+		void fact()
+		{
+			for (int i = 1;i <= a;i++)
+			{
+				prd *= i;
+			}
+			cout << "The factorial is " << prd << endl;
+		}
+};
+int main()
+{
+	factorial x;
+	cout << "Enter the number" << endl;
+	int y;
+	cin >> y;
+	x.assign(y);
+	x.fact();
+
+}
