@@ -1,0 +1,96 @@
+#include<iostream>
+
+using namespace std;
+class Add {
+private:int num1;
+int num2;
+public:
+	
+	void getdata1()
+	{
+		cout << "Enter num1" << endl;
+		cin >> num1;
+		cout << "Enter num2" << endl;
+		cin >> num2;
+	}
+	int addition(int& a, int& b)
+	{
+		a = num1;
+		b = num2;
+		return a + b;
+	}
+
+};
+class Sub {
+private:int num3;
+		int num2;
+public:
+	
+	void getdata2()
+	{
+		
+		cout << "Enter num2" << endl;
+		cin >> num2;
+		cout << "Enter num3" << endl;
+		cin >> num3;
+	}
+	int subtraction(int& c, int& d)
+	{
+		c = num2;
+		d = num3;
+		if (num2 > num3) {
+			return (c - d);
+		}
+		else {
+			return(d - c);
+		}
+	}
+
+};
+	
+		
+class Mult :public Add,public Sub {
+
+public:
+	void getdata_M()
+	{
+		getdata1();
+		getdata2();
+	}
+
+
+	void multi()
+	{
+		int y,z,u,v;
+		cout<<"Product is "<<(addition(y, z))*(subtraction(u, v))<<endl;
+	}
+};
+class Div :public Add, public Sub {
+
+public:
+	void getdata_D()
+	{
+		getdata1();
+		getdata2();
+	}
+
+
+	void div()
+	{
+		int j,k,l, m;
+		cout << "Quotient is " << (addition(j, k))/(subtraction(l, m)) << endl;
+	}
+};
+int main()
+{
+	Mult x;
+	
+	x.getdata_M();
+	x.multi();
+	
+	Div y;
+	y.getdata_D();
+	y.div();
+
+
+}
